@@ -6,6 +6,7 @@ import asyncio
 from starlette.requests import Request
 from starlette.responses import JSONResponse
 from starlette.middleware import Middleware
+from starlette.staticfiles import StaticFiles
 
 import discohook
 from discohook.middleware import SingleUseSessionMiddleware
@@ -82,4 +83,6 @@ async def test_set_command(interaction: discohook.Interaction):
 async def index(request: Request):
     return JSONResponse({"success": True}, status_code=200)
 
-app.add_route("/", index, methods=["GET"], include_in_schema=False)
+app.mount('/', app=StaticFiles(directory='static'), name="static")
+
+#app.add_route("/", index, methods=["GET"], include_in_schema=False)
