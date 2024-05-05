@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/pico.fluid.classless.min.css">
+</head>
+  <body>
+    <h1>Pixelvans verify wallet</h1>
+    <p id="version">Version:</p>
+    <button onclick="connectWallet()" id="connectButton">Connect Wallet</button>
+    <h3>User Token</h3>
+    <p id="token"></p>
+    <h3>Wallet Address</h3>
+    <p id="walletAddress">Connecting...</p>
+    <button onclick="signMessage()" disabled id="signButton">Sign Message</button>
+    <h3>Pubkey</h3>
+    <p id="pubKey"></p>
+    <h3>Signed Message</h3>
+    <p id="signedAmino"></p>
+    <h6>Serialized Message</h6>
+    <p id="serializedMessage"></p>
+  </body>
+  <script src="app.js"></script>
+</html>
