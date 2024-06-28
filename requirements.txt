@@ -1,2 +1,2 @@
-git+https://github.com/VotorDev/discohook.git@vercel_middleware
-redis
+git+https://github.com/jnsougata/discohook@a251e6f36e697c6168ef2f92552aa8c27acdd6c9
+storage[redis]@git+https://${GITHUB_TOKEN}@github.com/VotorDev/storage.git@v0.0.1
